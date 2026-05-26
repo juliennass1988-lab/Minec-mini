@@ -1,0 +1,9 @@
+{
+  "name": "miniblock-3d-walker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tiny blocky 3D voxel walker demo for GitHub/Vercel.",
+  "scripts": {
+    "start": "python3 -m http.server 5173"
+  }
+}

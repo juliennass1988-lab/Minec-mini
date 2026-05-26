@@ -2,33 +2,41 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="theme-color" content="#7dd957" />
-    <title>MiniBlock Walker</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>MiniBlock 3D Walker</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="game-shell">
-      <section class="top-ui" aria-label="Spielinformationen">
+    <div id="game-root">
+      <canvas id="game"></canvas>
+
+      <div class="hud">
         <div>
-          <p class="eyebrow">MiniBlock Walker</p>
-          <h1>Block-Männchen auf grünen Blöcken</h1>
+          <strong>MiniBlock 3D</strong>
+          <span>Voxel-Walker Demo</span>
         </div>
-        <button id="resetButton" class="pill-button" type="button">Neu starten</button>
-      </section>
+        <button id="resetBtn" type="button">Neu starten</button>
+      </div>
 
-      <canvas id="gameCanvas" width="960" height="540" aria-label="MiniBlock Walker Spielbereich"></canvas>
+      <div class="help">
+        <b>Steuerung:</b> WASD / Pfeile · Leertaste springen · Touch-Buttons am Handy
+      </div>
 
-      <section class="bottom-ui" aria-label="Steuerung">
-        <div class="hint">Tastatur: A/D oder Pfeile · Springen: Leertaste</div>
-        <div class="touch-controls" aria-label="Mobile Steuerung">
-          <button class="control-button" data-key="left" type="button">◀</button>
-          <button class="control-button jump" data-key="jump" type="button">▲</button>
-          <button class="control-button" data-key="right" type="button">▶</button>
+      <div class="mobile-controls" aria-label="Mobile Steuerung">
+        <div class="dpad">
+          <button data-key="forward">▲</button>
+          <div>
+            <button data-key="left">◀</button>
+            <button data-key="back">▼</button>
+            <button data-key="right">▶</button>
+          </div>
         </div>
-      </section>
-    </main>
+        <button class="jump" data-key="jump">Springen</button>
+      </div>
 
-    <script src="game.js"></script>
+      <div id="loading">Lade 3D-Welt…</div>
+    </div>
+
+    <script type="module" src="./game.js"></script>
   </body>
 </html>

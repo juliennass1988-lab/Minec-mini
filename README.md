@@ -1,38 +1,44 @@
-# MiniBlock Walker
+# MiniBlock 3D Walker
 
-Ein kleines blockiges Webgame zum Hochladen bei GitHub.
+Eine sehr kleine 3D-Voxel-Webgame-Demo zum Hochladen bei GitHub oder Vercel.
 
 ## Inhalt
 
-- `index.html` — Startdatei
-- `styles.css` — Mobile-first UI
-- `game.js` — Spiellogik, Canvas-Rendering, Steuerung
+- Blockige 3D-Figur aus Cubes
+- Grüne Voxel-Blöcke
+- Laufen und Springen
+- Kamera folgt der Figur
+- Tastatursteuerung und Mobile-Touch-Buttons
+- Keine Minecraft-/Mojang-Assets, eigener blockiger Stil
 
 ## Steuerung
 
-- Links/Rechts: `A`, `D` oder Pfeiltasten
-- Springen: `Leertaste`, `W` oder Pfeil hoch
-- Auf dem Handy: Buttons unten benutzen
+Desktop:
 
-## Start lokal
+- `WASD` oder Pfeiltasten: laufen
+- `Leertaste`: springen
 
-Einfach `index.html` im Browser öffnen.
+Mobile:
 
-Alternativ im Ordner starten:
+- D-Pad links
+- Springen-Button rechts
 
-```bash
-python3 -m http.server 5173
+## GitHub / Vercel
+
+Einfach alle Dateien in ein GitHub-Repo hochladen.
+
+Für Vercel:
+
+- Framework Preset: `Other`
+- Build Command: leer lassen
+- Output Directory: `./`
+
+## Hinweis
+
+Das Projekt nutzt Three.js über CDN:
+
+```html
+https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js
 ```
 
-Dann im Browser öffnen:
-
-```text
-http://localhost:5173
-```
-
-## Deployment
-
-Für GitHub Pages oder Vercel reicht es, diese Dateien ins Repository zu laden.
-Es gibt keine externen Assets und keine Build-Abhängigkeiten.
-
-Hinweis: Das Projekt nutzt einen eigenen blockigen Look. Es enthält keine Minecraft-/Mojang-Assets.
+Dadurch braucht das Projekt keinen npm-Build.
