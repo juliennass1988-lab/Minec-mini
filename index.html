@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#7dd957" />
+    <title>MiniBlock Walker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="top-ui" aria-label="Spielinformationen">
+        <div>
+          <p class="eyebrow">MiniBlock Walker</p>
+          <h1>Block-Männchen auf grünen Blöcken</h1>
+        </div>
+        <button id="resetButton" class="pill-button" type="button">Neu starten</button>
+      </section>
+
+      <canvas id="gameCanvas" width="960" height="540" aria-label="MiniBlock Walker Spielbereich"></canvas>
+
+      <section class="bottom-ui" aria-label="Steuerung">
+        <div class="hint">Tastatur: A/D oder Pfeile · Springen: Leertaste</div>
+        <div class="touch-controls" aria-label="Mobile Steuerung">
+          <button class="control-button" data-key="left" type="button">◀</button>
+          <button class="control-button jump" data-key="jump" type="button">▲</button>
+          <button class="control-button" data-key="right" type="button">▶</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
